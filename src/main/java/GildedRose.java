@@ -49,9 +49,9 @@ public class GildedRose {
                 currentItem.setQuality(currentItem.getQuality() - 1);
             }
 
-            if ((!"Aged Brie".equals(currentItemName)) && !"Backstage passes to a TAFKAL80ETC concert".equals(currentItemName)) {
+            if ((!AGED_BRIE.equals(currentItemName)) && !BACKSTAGE_PASSES_TO_A_TAFKAL80_ETC_CONCERT.equals(currentItemName)) {
                 if (currentItem.getQuality() > 0) {
-                    if (!"Sulfuras, Hand of Ragnaros".equals(currentItemName)) {
+                    if (!SULFURAS_HAND_OF_RAGNAROS.equals(currentItemName)) {
                         currentItem.setQuality(currentItem.getQuality() - 1);
                     }
                 }
@@ -59,7 +59,7 @@ public class GildedRose {
                 if (currentItem.getQuality() < 50) {
                     currentItem.setQuality(currentItem.getQuality() + 1);
 
-                    if ("Backstage passes to a TAFKAL80ETC concert".equals(currentItemName)) {
+                    if (BACKSTAGE_PASSES_TO_A_TAFKAL80_ETC_CONCERT.equals(currentItemName)) {
                         if (currentItem.getSellIn() < 11) {
                             if (currentItem.getQuality() < 50) {
                                 currentItem.setQuality(currentItem.getQuality() + 1);
@@ -75,15 +75,15 @@ public class GildedRose {
                 }
             }
 
-            if (!"Sulfuras, Hand of Ragnaros".equals(currentItemName)) {
+            if (!SULFURAS_HAND_OF_RAGNAROS.equals(currentItemName)) {
                 currentItem.setSellIn(currentItem.getSellIn() - 1);
             }
 
             if (currentItem.getSellIn() < 0) {
-                if (!"Aged Brie".equals(currentItemName)) {
-                    if (!"Backstage passes to a TAFKAL80ETC concert".equals(currentItemName)) {
+                if (!AGED_BRIE.equals(currentItemName)) {
+                    if (!BACKSTAGE_PASSES_TO_A_TAFKAL80_ETC_CONCERT.equals(currentItemName)) {
                         if (currentItem.getQuality() > 0) {
-                            if (!"Sulfuras, Hand of Ragnaros".equals(currentItemName)) {
+                            if (!SULFURAS_HAND_OF_RAGNAROS.equals(currentItemName)) {
                                 currentItem.setQuality(currentItem.getQuality() - 1);
                             }
                         }
